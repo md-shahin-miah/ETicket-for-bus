@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#512da8"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:theme="@style/AppTheme.Toolbar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/circular_background"
+                    android:src="@drawable/ic_person_outline_white_24dp"
+                    android:padding="2dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/calibri"
+                    android:text="Hello Shahin Miah"
+                    android:textColor="#FFF8F8"
+                    android:textSize="22sp"
+                    android:layout_toRightOf="@+id/image"
+                    android:paddingLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbar"
+
+        >
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/travel" />
+
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/gotham"
+                        android:text="Where do you want to go?"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="-80dp"
+                    android:layout_marginRight="8dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="16dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/filledTextField"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:ems="13"
+                            android:fontFamily="@font/calibri"
+                            android:hint="Destination"
+                            android:inputType="text"
+                            android:padding="10dp"
+                            android:textColorHint="#706D6D">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890_-@."
+                                android:inputType="textFilter|textVisiblePassword|textNoSuggestions"
+
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/filledTextField2"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/filledTextField"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:ems="13"
+                            android:fontFamily="@font/calibri"
+                            android:hint="From"
+                            android:inputType="text"
+                            android:padding="10dp"
+                            android:textColorHint="#706D6D">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPassword" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/filledTextField3"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/filledTextField2"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:ems="13"
+                            android:fontFamily="@font/calibri"
+                            android:hint="Select Date"
+                            android:inputType="date"
+                            android:padding="5dp"
+                            android:textColorHint="#706D6D">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPassword" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!--                        <com.google.android.material.textfield.TextInputLayout-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_marginBottom="8dp"-->
+                        <!--                            android:textColorHint="#FF8A99AF">-->
+
+                        <!--                            <EditText-->
+                        <!--                                android:layout_width="match_parent"-->
+                        <!--                                android:layout_height="match_parent"-->
+                        <!--                                android:drawablePadding="16dp"-->
+                        <!--                                android:drawableStart="@drawable/ic_location_on_light_blue_24dp"-->
+                        <!--                                android:fontFamily="@font/calibri"-->
+                        <!--                                android:hint="Destination"-->
+                        <!--                                android:inputType="text"-->
+                        <!--                                android:maxLines="1"-->
+                        <!--                                android:textColor="@android:color/black"-->
+                        <!--                                android:textSize="16sp" />-->
+                        <!--                        </com.google.android.material.textfield.TextInputLayout>-->
+
+                        <!--                        <com.google.android.material.textfield.TextInputLayout-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_marginBottom="8dp"-->
+                        <!--                            android:textColorHint="#FF8A99AF">-->
+
+                        <!--                            <EditText-->
+                        <!--                                android:layout_width="match_parent"-->
+                        <!--                                android:layout_height="match_parent"-->
+                        <!--                                android:drawablePadding="16dp"-->
+                        <!--                                android:drawableStart="@drawable/ic_location_on_light_blue_24dp"-->
+                        <!--                                android:fontFamily="@font/calibri"-->
+                        <!--                                android:hint="From"-->
+                        <!--                                android:inputType="text"-->
+                        <!--                                android:maxLines="1"-->
+                        <!--                                android:textColor="@android:color/black"-->
+                        <!--                                android:textSize="16sp" />-->
+                        <!--                        </com.google.android.material.textfield.TextInputLayout>-->
+
+                        <!--                        <com.google.android.material.textfield.TextInputLayout-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_marginBottom="8dp"-->
+                        <!--                            android:textColorHint="#FF8A99AF">-->
+
+                        <!--                            <EditText-->
+                        <!--                                android:layout_width="match_parent"-->
+                        <!--                                android:layout_height="match_parent"-->
+                        <!--                                android:drawablePadding="16dp"-->
+                        <!--                                android:drawableStart="@drawable/ic_date_range_light_blue_24dp"-->
+                        <!--                                android:fontFamily="@font/calibri"-->
+                        <!--                                android:hint="Select Date"-->
+                        <!--                                android:inputType="date"-->
+                        <!--                                android:maxLines="1"-->
+                        <!--                                android:textColor="@android:color/black"-->
+                        <!--                                android:textSize="16sp" />-->
+                        <!--                        </com.google.android.material.textfield.TextInputLayout>-->
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/search_buses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="16dp"
+                    app:cornerRadius="10dp"
+                    android:backgroundTint="#FF5722"
+                    android:fontFamily="@font/calibri"
+                    android:text="Search Buses"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.Toolbar" parent="ThemeOverlay.AppCompat.ActionBar" />
+<!--    <style name="Widget.MaterialComponents.TextInputLayout.OutlinedBox" parent="Base.Widget.MaterialComponents.TextInputLayout">-->
+<!--        <item name="materialThemeOverlay">-->
+<!--            @style/ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox-->
+<!--        </item>-->
+<!--        <item name="boxCollapsedPaddingTop">0dp</item>-->
+<!--    </style>-->
+</resources>
